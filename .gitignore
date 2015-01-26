@@ -1,3 +1,6 @@
 # Ignore emacs temp file
 *~
 \#*\#
+
+# Ignore local extensions file
+local-extensions.el
