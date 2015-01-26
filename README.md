@@ -1,7 +1,7 @@
 # .emacs.d
-Contains my emacs customizations.
+My emacs customizations.
 
-## Contains ##
+### Contains ###
 * Highlight trailing whitespace
 * Automatic removal of trailing whitespace
 * Highlight parts of line exceeding 80 characters in length.
