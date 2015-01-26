@@ -1,11 +1,11 @@
 ;; Put local extensions in a seperate file to enable to have different setup
 ;; for different machines.
 ;; For example one setup at work, another at home and so forth.
-(defconst local-ext "local-extensions.el")
+(defconst local-ext "~/.emacs.d/local-extensions.el")
 (if (file-exists-p local-ext)
     (load-file local-ext))
 
-(load-file "two-mode-mode.el")
+(load-file "~/.emacs.d/two-mode-mode.el")
 (require 'nxml-mode)
 (require 'two-mode-mode)
 (or (assoc "\\.yaws$" auto-mode-alist)
