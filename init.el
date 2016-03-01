@@ -62,5 +62,5 @@
                          :foreground "yellow" :inverse-video nil
                          :box nil :strike-through nil :overline nil
                          :underline nil :slant normal :weight normal
-                         :height 90 :width normal :foundry "unknown"
+                         :height 110 :width normal :foundry "unknown"
                          :family "DejaVu Sans Mono")))))
