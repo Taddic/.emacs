@@ -2,14 +2,16 @@
 ;; for different machines.
 ;; For example one setup at work, another at home and so forth.
 (defconst local-ext "~/.emacs.d/local-extensions.el")
+(defconst two-mode "~/.emacs.d/two-mode-mode.el")
 (if (file-exists-p local-ext)
     (load-file local-ext))
 
-(load-file "~/.emacs.d/two-mode-mode.el")
-(require 'nxml-mode)
-(require 'two-mode-mode)
-(or (assoc "\\.yaws$" auto-mode-alist)
-    (setq auto-mode-alist (cons '("\\.yaws$" . two-mode-mode) auto-mode-alist)))
+(if (file-exists-p two-mode)
+    (load-file two-mode)
+  (require 'nxml-mode)
+  (require 'two-mode-mode)
+  (or (assoc "\\.yaws$" auto-mode-alist)
+      (setq auto-mode-alist (cons '("\\.yaws$" . two-mode-mode) auto-mode-alist))))
 
 
 (require 'whitespace)
@@ -39,10 +41,10 @@
 
 (setq version-control t)
 (setq delete-old-versions 'no)
-(setq kept-new-versions 400)
-(setq kept-old-versions 400)
+(setq kept-new-versions 20)
+(setq kept-old-versions 20)
 (setq vc-make-backup-files t)
-(setq default-frame-alist '((left . 0) (top . 0)(height . 46)))
+(setq default-frame-alist '((height . 76)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -55,7 +57,7 @@
 
  ;; face for Tabs
  (set-face-attribute 'whitespace-tab nil
-                     :background "red1"
+                     :background "black"
                      :foreground "yellow"
                      :weight 'bold)
  '(default ((t (:inherit nil :stipple nil :background "black"
@@ -63,4 +65,4 @@
                          :box nil :strike-through nil :overline nil
                          :underline nil :slant normal :weight normal
                          :height 110 :width normal :foundry "unknown"
-                         :family "DejaVu Sans Mono")))))
+			 )))))
