@@ -1,6 +1,13 @@
 ;; Put local extensions in a seperate file to enable to have different setup
 ;; for different machines.
 ;; For example one setup at work, another at home and so forth.
+
+;; Added by Package.el.  This must come before configurations of
+;; installed packages.  Don't delete this line.  If you don't want it,
+;; just comment it out by adding a semicolon to the start of the line.
+;; You may delete these explanatory comments.
+(package-initialize)
+
 (defconst local-ext "~/.emacs.d/local-extensions.el")
 (defconst two-mode "~/.emacs.d/two-mode-mode.el")
 (if (file-exists-p local-ext)
@@ -45,6 +52,7 @@
 (setq kept-old-versions 20)
 (setq vc-make-backup-files t)
 (setq default-frame-alist '((height . 76)))
+(setq-default indent-tabs-mode nil)
 (setq ring-bell-function
       (lambda ()
         (let ((orig-fg (face-foreground 'mode-line)))
