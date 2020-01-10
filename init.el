@@ -25,6 +25,8 @@
 (require 'whitespace)
 ;; Remove trailing whitespaces when writing to a file
 (add-hook 'write-file-hooks 'delete-trailing-whitespace)
+
+;; Enable erlang-mode for rebar.config files
 (add-to-list 'auto-mode-alist '("rebar.config" . erlang-mode))
 
 
