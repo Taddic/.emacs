@@ -24,6 +24,8 @@
 (require 'whitespace)
 ;; Remove trailing whitespaces when writing to a file
 (add-hook 'write-file-hooks 'delete-trailing-whitespace)
+(add-to-list 'auto-mode-alist '("rebar.config" . erlang-mode))
+
 
 ;; Display only tails of lines longer than 80 columns, tabs and
 ;; trailing whitespaces
