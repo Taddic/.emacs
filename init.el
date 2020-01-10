@@ -9,10 +9,11 @@
 (package-initialize)
 
 (defconst local-ext "~/.emacs.d/local-extensions.el")
-(defconst two-mode "~/.emacs.d/two-mode-mode.el")
 (if (file-exists-p local-ext)
     (load-file local-ext))
 
+
+(defconst two-mode "~/.emacs.d/two-mode-mode.el")
 (if (file-exists-p two-mode)
     (load-file two-mode)
   (require 'nxml-mode)
@@ -50,8 +51,8 @@
 
 (setq version-control t)
 (setq delete-old-versions 'no)
-(setq kept-new-versions 20)
-(setq kept-old-versions 20)
+(setq kept-new-versions 10)
+(setq kept-old-versions 10)
 (setq vc-make-backup-files t)
 (setq default-frame-alist '((height . 76)))
 (setq-default indent-tabs-mode nil)
