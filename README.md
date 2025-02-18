@@ -1,5 +1,5 @@
 # .emacs.d
-My emacs customizations.
+My emacs customizations. Feel free to steal them for your own settings.
 
 ### Contains ###
 * Definition for having local extensions. Useful for when you have things at
